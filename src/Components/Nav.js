@@ -11,7 +11,7 @@ const Nav = () => {
             <h1><a id="logo" href="#">HK</a></h1>
             <ul>
                 <li>
-                    <Link to="/" > 1. About Us </Link>
+                    <Link to="/" > 1. About Me </Link>
                     <Line
             transition={{ duration: 0.75 }}
             initial={{ width: "0%" }}
