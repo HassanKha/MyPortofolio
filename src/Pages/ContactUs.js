@@ -3,7 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { pageAnimation, TitleAnim } from "../animation";
 import styled from "styled-components";
-import ScrollTop from './../Components/ScrollTop';
+import ScrollTop from "./../Components/ScrollTop";
 
 const ContactUs = () => {
   return (
@@ -20,7 +20,7 @@ const ContactUs = () => {
         </Hide>
       </Title>
       <div>
-      <Hide>
+        <Hide>
           <Social variants={TitleAnim}>
             <Circle />
             <h2>01118877375</h2>
@@ -35,23 +35,31 @@ const ContactUs = () => {
         <Hide>
           <Social variants={TitleAnim}>
             <Circle />
-            <h2 ><a href="https://www.linkedin.com/in/hassan-khaled-6891531b6/">LinkedIn</a></h2>
+            <h2>
+              <a href="https://www.linkedin.com/in/hassan-khaled-6891531b6/">
+                LinkedIn
+              </a>
+            </h2>
           </Social>
         </Hide>
         <Hide>
           <Social variants={TitleAnim}>
             <Circle />
-            <h2 ><a href="https://www.instagram.com/hassan.khaled.94">Instagram</a></h2>
+            <h2>
+              <a href="https://www.instagram.com/hassan.khaled.94">Instagram</a>
+            </h2>
           </Social>
         </Hide>
         <Hide>
           <Social variants={TitleAnim}>
             <Circle />
-            <h2 ><a href="https://github.com/HassanKha">GitHub</a></h2>
+            <h2>
+              <a href="https://github.com/HassanKha">GitHub</a>
+            </h2>
           </Social>
         </Hide>
       </div>
-      <ScrollTop/>
+      <ScrollTop />
     </ContactStyle>
   );
 };
@@ -66,7 +74,7 @@ const ContactStyle = styled(motion.div)`
   }
 `;
 const Title = styled.div`
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   color: black;
   @media (max-width: 1500px) {
     margin-top: 5rem;
@@ -85,8 +93,9 @@ const Social = styled(motion.div)`
   display: flex;
   align-items: center;
   h2 {
-    margin: 2rem;
-    font-size: 4rem;
+    margin: 1.9rem;
+    font-size: 3.8rem;
+    font-weight: bold;
     :hover {
       box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
     }
@@ -96,7 +105,6 @@ const Social = styled(motion.div)`
     color: #353535;
     font-size: 4rem;
     cursor: pointer;
-    
   }
 `;
 const Line = styled(motion.div)`
