@@ -39,7 +39,7 @@ const AboutSection = () => {
           </Hide>
         </motion.div>
         <motion.p variants={Fade}>
-          Secure a Challenging Position as a Frontend Developer in a Dynamic and
+          Secure a Challenging Position as a Full Stack Developer in a Dynamic and
           Collaborative Work Environment, where I can Utilize my Skills,
           Creativity, and Passion for Web Development to Contribute to the
           Success of the Organization.
