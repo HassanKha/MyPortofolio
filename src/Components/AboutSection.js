@@ -28,7 +28,7 @@ const AboutSection = () => {
           </Hide>
           <Hide>
             <motion.h2 className="dreams" variants={TitleAnim}>
-              Frontend <span>Developer</span> - <span>Software</span> Enginner{" "}
+              Full Stack <span>Developer</span> - <span>Software</span> Enginner{" "}
             </motion.h2>
           </Hide>
           <Hide>
