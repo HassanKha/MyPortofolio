@@ -49,11 +49,13 @@ export const Image = styled.div`
   z-index: 2;
   overflow: hidden;
   opacity: 0.9;
+ 
   img {
     width: 100%;
     height: 80vh;
     object-fit: cover;
     border-radius: 2px;
+    box-shadow: 0px 0px 5px rgba(255, 255, 255, 1.5);
   }
   .skill {
     height: 70vh;

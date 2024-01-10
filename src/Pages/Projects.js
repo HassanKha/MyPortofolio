@@ -134,7 +134,15 @@ const Head = styled(motion.div)`
   font-weight: bold;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+   @media only screen and (max-width: 600px) {
+   
+    margin: auto;
+      h2 {
+        font-size: 2rem !important;
+      }
+   }
 `;
 const Work = styled(motion.div)`
   min-height: 100vh;
@@ -143,8 +151,22 @@ const Work = styled(motion.div)`
   h2 {
     padding: 1rem 0rem;
   }
+  @media only screen and (max-width: 600px) {
+  
+   }
 `;
 const Movie = styled(motion.div)`
+ @media only screen and (max-width: 600px) {
+    width: 100%;
+    img {
+      height: 10vh !important;
+  
+    }
+    h2 {
+      font-size: 1.3rem !important;
+    }
+   }
+
   button {
     color: black;
     margin-left: 1rem;
@@ -183,6 +205,12 @@ const Movie = styled(motion.div)`
 const Hide = styled.div`
   overflow: hidden;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+  @media only screen and (max-width: 600px) {
+    width: 100%;
+
+     
+    
+   }
 `;
 //Frame Animation
 const Frame1 = styled(motion.div)`

@@ -52,15 +52,13 @@ const OurWork = () => {
 
       <Movie variants={Fade} initial="hidden" ref={element} animate={controls}>
         <h2>
-          Lead A Team Of 3-4 Soldiers & 1-2 Non-Commissioned Officers To
-          Maintain & Develop IT Depatment .
+        Led a Team of 3-4 Soldiers and 1-2 Non-Commissioned Officers in the IT Department,
+Overseeing the Development and Maintenance of an Internal Private Website as a Full
+Stack Developer .
         </h2>
-        <h2>Managed A Server Manager Of A LAN Network And Clients .</h2>
-        <h2>
-          Provided Technical Support To Users On The Network, Troubleshooting
-          Issues With Hardware And Software, And Assisting With Software
-          Installations And Upgrades .
-        </h2>
+        <h2>Managed the Server Manager of a LAN network and Clients, providing Technical Support
+and Troubleshooting issues with Hardware and Software.</h2>
+       
         <motion.div variants={LineAnim} className="line"></motion.div>
 
         <img src={hassan4} alt="theracer" />
@@ -72,11 +70,11 @@ const OurWork = () => {
         animate={controls2}
       >
         <h2>
-          Implemented A Backup And Disaster Recovery Plan For The Network,
-          Including Regular Backups Of Critical Data And Procedures For
-          Responding To System Failures Or Data Loss.
+        Successfully Solved Complex Database Query Problems as Technical Application
+Support in Server Manager SQL.
         </h2>
-        <h2>Develop And Maintain An Internal Private Website .</h2>
+        <h2>Implemented a Backup and Disaster Recovery Plan for the Network, ensuring Regular
+Backups of Critical data and Establishing Procedures for System Failures or Data Loss </h2>
         <motion.div variants={LineAnim} className="line"></motion.div>
 
         <img src={hassan2} alt="goodtimes" />
@@ -95,6 +93,17 @@ const Work = styled(motion.div)`
   }
 `;
 const Movie = styled(motion.div)`
+@media only screen and (max-width: 600px) {
+ 
+    width: 100%;
+    img {
+      height: 30vh !important;
+  
+    }
+    h2 {
+      font-size: 1.5rem !important;
+    }
+   }
   padding-bottom: 10rem;
   .armour {
     font-size: 2.6rem;
