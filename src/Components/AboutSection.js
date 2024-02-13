@@ -1,7 +1,7 @@
 import { React } from "react";
 import home1 from "../img/home1.png";
 import hassan from "../img/hassan.jpg";
-import Hassan from "../img/hassan14.jpeg";
+import Hassan from "../img/hassan14.JPG";
 import { motion } from "framer-motion";
 import { About, Description, Image, Hide } from "../styles";
 import { TitleAnim, Fade, photoAnim } from "./../animation";
