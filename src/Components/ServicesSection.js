@@ -18,6 +18,8 @@ import mysql from "../img/mysql.png"
 import windows from "../img/windows.png"
 import node from "../img/nodejs.png"
 import web from "../img/web.jpg"
+import aspnet from "../img/aspnet.png"
+import Devops from "../img/Devops.png"
 const ServicesSection = () => {
 
 const [element , controls] = useScroll();
@@ -82,11 +84,24 @@ return (
             <Card>
                 <div className="icon">
         <img  src={windows} alt="" />
-        <h3>Server Manager</h3>
+        <h3>System Adminstration</h3>
                 </div>
                 {/* <p>Lorem ipsum dolor sit amet.</p> */}
             </Card>
-
+            <Card>
+                <div className="icon">
+        <img  src={aspnet} alt="" />
+        <h3>ASP.NET</h3>
+                </div>
+                {/* <p>Lorem ipsum dolor sit amet.</p> */}
+            </Card>
+            <Card>
+                <div className="icon">
+        <img  src={Devops} alt="" />
+        <h3>DevOps</h3>
+                </div>
+                {/* <p>Lorem ipsum dolor sit amet.</p> */}
+            </Card>
         </Cards>
     </Description>
     <Image>

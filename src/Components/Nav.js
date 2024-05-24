@@ -1,4 +1,4 @@
-import { React } from "react";
+import { React, useState } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -7,6 +7,11 @@ import { useLocation } from "react-router-dom";
 const Nav = () => {
   const { pathname } = useLocation();
   console.log(pathname);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+
+  const toggleDropdown = () => {
+    setDropdownOpen(!dropdownOpen);
+  };
   return (
     <StyledNav>
       <h1>
@@ -16,7 +21,7 @@ const Nav = () => {
       </h1>
       <ul>
         <li>
-          <Link to="/"> 1. About Me </Link>
+          <Link to="/">About Me</Link>
           <Line
             transition={{ duration: 0.75 }}
             initial={{ width: "0%" }}
@@ -24,23 +29,42 @@ const Nav = () => {
           />
         </li>
         <li>
-          <Link to="/projects"> 2. My Projects </Link>
+          <Link to="/projects">My Projects</Link>
           <Line
             transition={{ duration: 0.75 }}
             initial={{ width: "0%" }}
             animate={{ width: pathname === "/projects" ? "50%" : "0%" }}
           />
         </li>
-        <li>
-          <Link to="/work"> 3. My Work Experience</Link>
+        <li
+        //  onMouseEnter={toggleDropdown}
+        //  onMouseLeave={toggleDropdown}
+         onClick={toggleDropdown}
+        >
+          <h7>My Work Experience</h7>
           <Line
             transition={{ duration: 0.75 }}
             initial={{ width: "0%" }}
             animate={{ width: pathname === "/work" ? "50%" : "0%" }}
           />
+          {dropdownOpen && (
+            <DropdownMenu
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+            >
+              <DropdownItem>
+                <Link to="/work">My Military Experience</Link>
+              </DropdownItem>
+              <DropdownItem>
+                <Link to="/bank">My Bank Experience</Link>
+              </DropdownItem>
+             
+            </DropdownMenu>
+          )}
         </li>
         <li>
-          <Link to="/contact"> 4. Contact me</Link>
+          <Link to="/contact">Contact me</Link>
           <Line
             transition={{ duration: 0.75 }}
             initial={{ width: "0%" }}
@@ -65,6 +89,9 @@ const StyledNav = styled.nav`
   background: #282828;
   a {
     text-decoration: none;
+    color: white;
+  }
+  h7{
     color: white;
   }
   ul {
@@ -107,6 +134,29 @@ const Line = styled(motion.div)`
   left: 60%;
   @media (max-width: 1300px) {
     left: 0%;
+  }
+`;
+
+const DropdownMenu = styled(motion.div)`
+  position: absolute;
+  top :  160%;
+  left: 50%;
+  background: #282828;
+  border: 1px solid #23d997;
+  padding: 0.5rem 1rem;
+  z-index: 10;
+`;
+
+const DropdownItem = styled.div`
+  margin: 0.5rem 0;
+  width: 12rem;
+  a {
+    font-size: 1rem;
+    color: white;
+    text-decoration: none;
+    &:hover {
+      color: #23d997;
+    }
   }
 `;
 export default Nav;

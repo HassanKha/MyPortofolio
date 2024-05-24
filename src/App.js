@@ -8,6 +8,7 @@ import Projects from "./Pages/Projects";
 import { Switch, Route, useLocation } from "react-router-dom";
 import MovieDetails from "./Pages/MovieDetails";
 import { AnimatePresence } from "framer-motion";
+import Bank from "./Pages/Bank";
 
 function App() {
   const Location = useLocation();
@@ -27,7 +28,9 @@ function App() {
           <Route path="/work" exact>
             <OurWork />
           </Route>
-
+          <Route path="/bank" exact>
+            <Bank />
+          </Route>
           {/* <Route path="/work/:id">
             <MovieDetails />
           </Route> */}

@@ -6,6 +6,7 @@ import goodtimes from "../img/goodtimes-small.png";
 import hassan2 from "../img/hassan2.JPG";
 import hassan3 from "../img/hassan5.JPG";
 import hassan4 from "../img/hassan4.JPG";
+import hassan from "../img/32842 (1).jpg";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import {
@@ -38,30 +39,50 @@ const OurWork = () => {
       </motion.div>
       <Movie>
         <motion.h2 class="head" variants={Fade}>
-          HEAD OF IT DEPARTMENT
+          Information Technology Army Officer
         </motion.h2>
         <motion.h2 class="armour" variants={Fade}>
-          The Main Armor 101 Workshop at Armed Forces
+          Egyptian Armed Forces | The Main Armor 101 Workshop
         </motion.h2>
+        <motion.h6>
+        2022 April – 2023 October
+<span>Hikestep, Cairo, Egypt</span>
+        </motion.h6>
         <motion.div variants={LineAnim} className="line"></motion.div>
-
+        <motion.h3>
+         During my tenure as a <span>Reserve Army Officer</span> , 101 Workshop was
+          Responsible for the Production of Engines and other Equipment for
+          Armor , I held the Positions of :
+        </motion.h3>
+        <motion.h5>
+        <span>•</span> <span>Lieutenant</span> <u>2022 April</u> - <u>2022 December</u> .
+          <br />
+          <span>•</span> <span>First Lieutenant</span> <u>2022 December</u> - <u>2023 October</u> .
+        </motion.h5>
         <Hide>
-          <motion.img variants={photoAnim} src={hassan3} alt="athlete" />
+          <motion.img variants={photoAnim} src={hassan} alt="athlete" />
         </Hide>
       </Movie>
 
       <Movie variants={Fade} initial="hidden" ref={element} animate={controls}>
-        <h2>
-        Led a Team of 3-4 Soldiers and 1-2 Non-Commissioned Officers in the IT Department,
-Overseeing the Development and Maintenance of an Internal Private Website as a Full
-Stack Developer .
-        </h2>
-        <h2>Managed the Server Manager of a LAN network and Clients, providing Technical Support
-and Troubleshooting issues with Hardware and Software.</h2>
-       
+        <h3>
+        🟢 Led a Team of 3-4 Soldiers and 1-2 Non-Commissioned Officers in the IT
+          Department, Overseeing the Development and Maintenance of an Internal
+          Private Website as a <span>Full Stack Developer</span> .
+        </h3>
+        <h3>
+        🟢 Managed the <span>Server Manager of a LAN network and Clients</span>, providing
+          Technical Support and Troubleshooting issues with Hardware and
+          Software.
+        </h3>
+        <h3>
+        🟢 Responsible for the Installation, Configuration, and Maintenance of Server
+Infrastructure, Including <span>𝐀𝐜𝐭𝐢𝐯𝐞 𝐃𝐢𝐫𝐞𝐜𝐭𝐨𝐫𝐲</span> Services, Managing <span>𝐔𝐬𝐞𝐫 𝐀𝐜𝐜𝐨𝐮𝐧𝐭𝐬</span>, <span>𝐒𝐞𝐜𝐮𝐫𝐢𝐭𝐲 𝐏𝐞𝐫𝐦𝐢𝐬𝐬𝐢𝐨𝐧𝐬</span>, <span>𝐆𝐫𝐨𝐮𝐩 𝐏𝐨𝐥𝐢𝐜𝐢𝐞𝐬</span>, and other Network-Related Tasks as a
+<span> 𝐍𝐞𝐭𝐰𝐨𝐫𝐤 𝐀𝐝𝐦𝐢𝐧𝐢𝐬𝐭𝐫𝐚𝐭𝐨r</span>
+        </h3>
         <motion.div variants={LineAnim} className="line"></motion.div>
 
-        <img src={hassan4} alt="theracer" />
+        <img src={hassan3} alt="theracer" />
       </Movie>
       <Movie
         variants={Fade}
@@ -69,15 +90,18 @@ and Troubleshooting issues with Hardware and Software.</h2>
         ref={element2}
         animate={controls2}
       >
-        <h2>
-        Successfully Solved Complex Database Query Problems as Technical Application
-Support in Server Manager SQL.
-        </h2>
-        <h2>Implemented a Backup and Disaster Recovery Plan for the Network, ensuring Regular
-Backups of Critical data and Establishing Procedures for System Failures or Data Loss </h2>
+        <h3>
+        🟢 Successfully Solved Complex Database Query Problems as <span>Technical
+          Application Support</span> in Server Manager <span>SQL</span>
+        </h3>
+        <h3>
+        🟢 Implemented an Auto <span>𝐁𝐚𝐜𝐤𝐮𝐩</span> for <span>𝐃𝐚𝐭𝐚𝐛𝐚𝐬𝐞</span> and for the Network, ensuring
+Regular Backups of Critical data and Establishing Procedures for System Failures
+or Data Loss
+        </h3>
         <motion.div variants={LineAnim} className="line"></motion.div>
 
-        <img src={hassan2} alt="goodtimes" />
+        <img src={hassan4} alt="goodtimes" />
       </Movie>
       <ScrollTop />
     </Work>
@@ -93,28 +117,54 @@ const Work = styled(motion.div)`
   }
 `;
 const Movie = styled(motion.div)`
-@media only screen and (max-width: 600px) {
- 
+  @media only screen and (max-width: 600px) {
     width: 100%;
     img {
       height: 30vh !important;
-  
     }
+
     h2 {
       font-size: 1.5rem !important;
     }
-   }
-  padding-bottom: 10rem;
+  }
+  padding-bottom: 1rem;
   .armour {
-    font-size: 2.6rem;
+    font-size: 2.5rem;
   }
   .head {
-    font-size: 4rem;
+    font-size: 4.5rem;
+  }
+  h6 {
+    
+ 
+      padding: 1rem 0rem;
+      font-size: 1.5rem;
+      span {
+        display: block;
+      }
+      text-align: center;
+    
   }
   h2 {
-    font-size: 2rem;
+    font-size: 4rem;
+    text-align: center;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
     padding: 0.5rem;
+  }
+  h3 {
+    font-size: 2rem;
+    text-align: center;
+    color: black;
+    padding-bottom: 1rem;
+  }
+  h5 {
+    font-size: 1.6rem;
+    text-align: center;
+    color: black;
+    padding-bottom: 1rem;
+    span {
+      font-size: 2rem;
+    }
   }
   .line {
     height: 0.5rem;
@@ -127,6 +177,7 @@ const Movie = styled(motion.div)`
     height: 100vh;
     object-fit: cover;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+    background-position: top center;
   }
 `;
 const Hide = styled.div`
