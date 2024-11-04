@@ -23,10 +23,26 @@ export const About = styled(motion.div)`
 
   @media (max-width: 1300px) {
     display: block;
-    padding: 2rem 2rem;
+    padding: 2rem;
     text-align: center;
   }
+  
+  @media (max-width: 768px) {
+    padding: 1rem;
+    .title {
+      .name {
+        font-size: 3rem;
+      }
+      .dreams {
+        font-size: 2rem;
+      }
+      .true {
+        font-size: 1.5rem;
+      }
+    }
+  }
 `;
+
 export const Description = styled.div`
   flex: 1;
   padding-right: 5rem;
@@ -37,28 +53,43 @@ export const Description = styled.div`
   button {
     margin-left: 1rem;
   }
+
   @media (max-width: 1300px) {
     padding: 0;
     button {
-      margin: 2rem 0rem 5rem 0rem;
+      margin: 2rem 0 5rem 0;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    padding: 0;
+    button {
+      margin: 1rem 0;
+      width: 100%; /* Make buttons full width on small screens */
     }
   }
 `;
+
 export const Image = styled.div`
   flex: 1;
   z-index: 2;
   overflow: hidden;
   opacity: 0.9;
- 
+
   img {
     width: 100%;
-    height: 80vh;
+    height: auto; /* Use auto height to maintain aspect ratio */
+    max-height: 80vh; /* Set a max height */
     object-fit: cover;
     border-radius: 2px;
     box-shadow: 0px 0px 5px rgba(255, 255, 255, 1.5);
   }
-  .skill {
-    height: 70vh;
+
+  @media (max-width: 768px) {
+    img {
+      margin-top: 1rem;
+      height: 60vh; /* Adjust height on smaller screens */
+    }
   }
 `;
 

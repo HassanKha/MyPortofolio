@@ -53,12 +53,16 @@ const Nav = () => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
             >
+                <DropdownItem>
+                <Link to="/frontend">My Frontend Experience</Link>
+              </DropdownItem>
+                <DropdownItem>
+                <Link to="/bank">My Bank Experience</Link>
+              </DropdownItem>
               <DropdownItem>
                 <Link to="/work">My Military Experience</Link>
               </DropdownItem>
-              <DropdownItem>
-                <Link to="/bank">My Bank Experience</Link>
-              </DropdownItem>
+           
              
             </DropdownMenu>
           )}
@@ -106,6 +110,7 @@ const StyledNav = styled.nav`
   li {
     padding-left: 10rem;
     position: relative;
+    cursor: pointer;
   }
 
   @media (max-width: 1300px) {

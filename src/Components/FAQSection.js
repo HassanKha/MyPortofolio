@@ -11,12 +11,12 @@ const FAQSeaction = () => {
 
   return (
     <FAQ
-      variants={scrollReveal}
+      // variants={scrollReveal}
       animate={controls}
       initial="hidden"
       ref={element}
     >
-      <AnimateSharedLayout>
+      {/* <AnimateSharedLayout> */}
         <h2>
           Any Questions <span>FAQ</span>
         </h2>
@@ -97,8 +97,7 @@ const FAQSeaction = () => {
               <br />
               - Honored to Embark on this journey, Diving into a Comprehensive Curriculum
               <br />
-              <span>•</span> Prompt Engineering.
-              <br />
+          
               <span>•</span> Essential Web Development: <span>𝐇𝐓𝐌𝐋, 𝐂𝐒𝐒, 𝐉𝐚𝐯𝐚𝐒𝐜𝐫𝐢𝐩𝐭</span>.
               <br />
               <span>•</span> Getting Started with <span>𝐆𝐢𝐭 and 𝐆𝐢𝐭𝐇𝐮𝐛</span>.
@@ -107,14 +106,12 @@ const FAQSeaction = () => {
               <br />
               <span>•</span> Back-End Development with <span>𝐍𝐨𝐝𝐞.𝐣𝐬 and 𝐄𝐱𝐩𝐫𝐞𝐬𝐬</span>.
               <br />
-              <span>•</span> Introduction to Containers: <span>𝐃𝐨𝐜𝐤𝐞𝐫, 𝐊𝐮𝐛𝐞𝐫𝐧𝐞𝐭𝐞𝐬 & 𝐎𝐩𝐞𝐧𝐒𝐡𝐢𝐟𝐭</span>.
-              <br />
               <span>•</span> <span>𝐅𝐮𝐥𝐥 𝐒𝐭𝐚𝐜𝐤 𝐖𝐞𝐛 𝐃𝐞𝐯𝐞𝐥𝐨𝐩𝐦𝐞𝐧𝐭 𝐏𝐫𝐨𝐣𝐞𝐜𝐭</span> using ReactJS & NodeJS.
               <br />
             </p>
             <div className="Date">
               <h5>
-                2024 May – Current <span>Giza, Egypt</span>
+              Apr 2024 - Oct 2024 <span>Giza, Egypt</span>
               </h5>
             </div>
 
@@ -183,7 +180,7 @@ const FAQSeaction = () => {
             <p>🟢 WORKING OUT</p>
           </div>
         </Toggle>
-      </AnimateSharedLayout>
+      {/* </AnimateSharedLayout> */}
     </FAQ>
   );
 };
@@ -191,17 +188,21 @@ const FAQSeaction = () => {
 const FAQ = styled(About)`
   width: 100vw;
   display: block;
+
   span {
     display: inline-block;
   }
+
   h2 {
     padding-bottom: 0.2rem;
     font-weight: lighter;
   }
+
   h4 {
     font-size: 2.5rem;
     text-shadow: 2px 2px 10px green;
   }
+
   .faq-line {
     background: #cccccc;
     height: 0.2rem;
@@ -213,6 +214,7 @@ const FAQ = styled(About)`
     padding: 3rem 0rem;
     cursor: pointer;
   }
+
   .Row {
     width: 100%;
     display: flex;
@@ -220,13 +222,43 @@ const FAQ = styled(About)`
 
   .answer {
     display: flex;
-.side {
-  margin-right: 3rem;
-  
-}
+    @media (max-width: 1235px) { 
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      p {
+      padding: 1rem 0rem;
+      width: 50%;
+
+      a {
+        font-size: 1.2rem;
+        cursor: pointer;
+        :hover {
+          text-shadow: 2px 2px 10px white;
+        }
+      }
+    }
+
+    .Date {
+      width: 20%;
+      margin-left: 10%;
+      padding: 1rem 0rem;
+      font-size: 1rem;
+
+      span {
+        display: block;
+      }
+    }
+    }
+    .side {
+      margin-right: 3rem;
+    }
+
     p {
       padding: 2rem 0rem;
       width: 80%;
+
       a {
         font-size: 1.5rem;
         cursor: pointer;
@@ -235,13 +267,45 @@ const FAQ = styled(About)`
         }
       }
     }
+
     .Date {
       width: 20%;
       margin-left: 10%;
       padding: 2rem 0rem;
       font-size: 1.2rem;
+
       span {
         display: block;
+      }
+    }
+  }
+
+  /* Responsive styles for small screens */
+  @media (max-width: 600px) {
+    h2 {
+      font-size: 1.8rem; /* Adjust heading size */
+    }
+
+    .Row {
+      flex-direction: column; /* Stack items vertically */
+    }
+
+    .answer {
+      flex-direction: column; /* Stack answer content */
+      width: 100%; /* Full width on small screens */
+
+      .side {
+        margin-right: 0; /* Remove right margin */
+        margin-bottom: 1rem; /* Add some space below */
+      }
+
+      p {
+        width: 100%; /* Full width */
+      }
+
+      .Date {
+        width: 100%; /* Full width for date */
+        margin-left: 0; /* Remove left margin */
       }
     }
   }

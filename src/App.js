@@ -9,6 +9,7 @@ import { Switch, Route, useLocation } from "react-router-dom";
 import MovieDetails from "./Pages/MovieDetails";
 import { AnimatePresence } from "framer-motion";
 import Bank from "./Pages/Bank";
+import Frontend from "./Pages/Frontend";
 
 function App() {
   const Location = useLocation();
@@ -30,6 +31,9 @@ function App() {
           </Route>
           <Route path="/bank" exact>
             <Bank />
+          </Route>
+          <Route path="/frontend" exact>
+            <Frontend />
           </Route>
           {/* <Route path="/work/:id">
             <MovieDetails />
